@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecureGate Login</title>
+  <link rel="stylesheet" href="front.css">
+</head>
+<body>
+  <div class="splash-screen" id="splashScreen" aria-hidden="true">
+    <div class="splash-content">
+      <div class="splash-mark">SG</div>
+      <h1 class="splash-title">SecureGate</h1>
+      <p class="splash-tag">Smart entry. Safer societies.</p>
+    </div>
+  </div>
+
+  <main class="login-shell">
+    <section class="login-card">
+      <p class="eyebrow">SecureGate</p>
+      <h1>Login by role</h1>
+      <p class="subtext">
+        Guard, resident, and secretary now open on different pages.
+      </p>
+
+      <div class="role-picker">
+        <button class="role-option active" type="button" data-role="resident">Resident</button>
+        <button class="role-option" type="button" data-role="guard">Guard</button>
+        <button class="role-option" type="button" data-role="secretary">Secretary</button>
+      </div>
+
+      <form class="login-form" id="loginForm">
+        <label>
+          Login ID
+          <input id="loginInput" type="text" value="A-302" placeholder="Flat no or role ID">
+        </label>
+
+        <label>
+          Password
+          <input id="passwordInput" type="password" value="1234" placeholder="Enter password">
+        </label>
+
+        <label id="nameField">
+          Name
+          <input id="nameInput" type="text" value="Ananya Patel" placeholder="Enter name">
+        </label>
+
+        <label class="remember-row">
+          <input id="rememberMe" type="checkbox">
+          <span>Remember me</span>
+        </label>
+
+        <p class="hint" id="loginHint">Resident example: A-302</p>
+        <button class="primary-button" type="submit">Open Page</button>
+      </form>
+
+      <div class="demo-box">
+        <p>Demo access</p>
+        <span>Resident: ID `A-302` | Password `1234`</span>
+        <span>Guard: ID `Main Gate` | Password `guard123`</span>
+        <span>Secretary: ID `Office` | Password `sec123`</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="front.js"></script>
+</body>
+</html>

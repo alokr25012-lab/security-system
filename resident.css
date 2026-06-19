@@ -1,0 +1,182 @@
+:root {
+  --bg: #f5f5f3;
+  --card: #ffffff;
+  --line: #d7d7d1;
+  --text: #1d2327;
+  --muted: #697177;
+  --green: #1e6a57;
+  --red: #a3473a;
+  --soft: #ecece8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.hidden {
+  display: none;
+}
+
+.page-shell {
+  width: min(980px, calc(100% - 24px));
+  margin: 24px auto;
+}
+
+.topbar,
+.grid,
+.button-row {
+  display: flex;
+  gap: 16px;
+}
+
+.topbar {
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--green);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+.subtext,
+.status-text {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.back-link {
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: var(--soft);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.grid {
+  flex-wrap: wrap;
+}
+
+.two-col > * {
+  flex: 1 1 320px;
+}
+
+.card {
+  padding: 22px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+}
+
+.primary-button,
+.danger-button {
+  flex: 1;
+  min-height: 48px;
+  border: 0;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.primary-button {
+  background: var(--green);
+  color: #fff;
+}
+
+.danger-button {
+  background: var(--red);
+  color: #fff;
+}
+
+.resident-photo {
+  width: 100%;
+  max-width: 260px;
+  margin: 12px 0 16px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+}
+
+.tracking-graph {
+  display: grid;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.graph-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 32px;
+  gap: 12px;
+  align-items: center;
+}
+
+.graph-track {
+  height: 14px;
+  border-radius: 999px;
+  background: var(--soft);
+  overflow: hidden;
+}
+
+.graph-fill {
+  height: 100%;
+  width: 0;
+  border-radius: 999px;
+  transition: width 0.25s ease;
+}
+
+.graph-fill.approved {
+  background: var(--green);
+}
+
+.graph-fill.waiting {
+  background: #c78b3e;
+}
+
+.graph-fill.rejected {
+  background: var(--red);
+}
+
+.complaint-card {
+  margin-top: 16px;
+}
+
+.complaint-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 260px;
+  text-decoration: none;
+}
+
+@media (max-width: 720px) {
+  .page-shell {
+    width: min(100% - 12px, 980px);
+    margin: 12px auto;
+  }
+
+  .topbar {
+    flex-direction: column;
+  }
+}

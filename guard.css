@@ -1,0 +1,166 @@
+:root {
+  --bg: #f5f5f3;
+  --card: #ffffff;
+  --line: #d7d7d1;
+  --text: #1d2327;
+  --muted: #697177;
+  --green: #1e6a57;
+  --soft: #ecece8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.page-shell {
+  width: min(980px, calc(100% - 24px));
+  margin: 24px auto;
+}
+
+.topbar,
+.steps-grid {
+  display: flex;
+  gap: 16px;
+}
+
+.topbar {
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--green);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+.subtext,
+.status-text {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.back-link {
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: var(--soft);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.steps-grid {
+  flex-wrap: wrap;
+}
+
+.step-card,
+.status-card {
+  padding: 22px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+}
+
+.step-card {
+  flex: 1 1 260px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.step-number {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  background: var(--text);
+  color: #fff;
+  font-weight: 700;
+}
+
+input {
+  width: 100%;
+  min-height: 52px;
+  margin: 12px 0;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.camera-box {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.camera-view,
+.photo-preview {
+  width: 100%;
+  min-height: 210px;
+  object-fit: cover;
+  background: #dfe5e1;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.primary-button {
+  width: 100%;
+  min-height: 54px;
+  border: 0;
+  border-radius: 14px;
+  background: var(--green);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.status-card {
+  margin-top: 18px;
+}
+
+.status-box {
+  display: grid;
+  gap: 10px;
+}
+
+.list-item {
+  padding: 14px;
+  background: var(--soft);
+  border-radius: 12px;
+}
+
+@media (max-width: 720px) {
+  .page-shell {
+    width: min(100% - 12px, 980px);
+    margin: 12px auto;
+  }
+
+  .topbar {
+    flex-direction: column;
+  }
+}
