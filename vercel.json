@@ -1,0 +1,45 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/front.html"
+    },
+    {
+      "source": "/login",
+      "destination": "/front.html"
+    },
+    {
+      "source": "/guard",
+      "destination": "/guard.html"
+    },
+    {
+      "source": "/resident",
+      "destination": "/resident.html"
+    },
+    {
+      "source": "/secretary",
+      "destination": "/secretary.html"
+    },
+    {
+      "source": "/complaint",
+      "destination": "/complaint.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ]
+}
