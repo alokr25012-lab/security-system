@@ -3,28 +3,8 @@
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/",
-      "destination": "/front.html"
-    },
-    {
       "source": "/login",
-      "destination": "/front.html"
-    },
-    {
-      "source": "/guard",
-      "destination": "/guard.html"
-    },
-    {
-      "source": "/resident",
-      "destination": "/resident.html"
-    },
-    {
-      "source": "/secretary",
-      "destination": "/secretary.html"
-    },
-    {
-      "source": "/complaint",
-      "destination": "/complaint.html"
+      "destination": "/index"
     }
   ],
   "headers": [
