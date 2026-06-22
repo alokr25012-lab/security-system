@@ -10,7 +10,7 @@ const complaintStatus = document.getElementById("complaintStatus");
 const complaintHistory = document.getElementById("complaintHistory");
 const backToResident = document.getElementById("backToResident");
 
-backToResident.href = `resident.htm?flat=${encodeURIComponent(flatParam)}&name=${encodeURIComponent(nameParam)}`;
+backToResident.href = `resident.html?flat=${encodeURIComponent(flatParam)}&name=${encodeURIComponent(nameParam)}`;
 complaintResidentHeading.textContent = `${nameParam} (${flatParam})`;
 
 function renderComplaints() {

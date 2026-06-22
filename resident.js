@@ -20,7 +20,7 @@ const name = params.get("name") || "Ananya Patel";
 let activeVisitorId = null;
 
 residentWelcome.textContent = `${name} (${flat})`;
-complaintPageLink.href = `complaint.htm?flat=${encodeURIComponent(flat)}&name=${encodeURIComponent(name)}`;
+complaintPageLink.href = `complaint.html?flat=${encodeURIComponent(flat)}&name=${encodeURIComponent(name)}`;
 
 function renderTrackingGraph() {
   const visitors = store.getData().visitors.filter((item) => item.flat === flat);

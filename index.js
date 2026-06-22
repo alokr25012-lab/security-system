@@ -88,13 +88,13 @@ loginForm.addEventListener("submit", (event) => {
   saveRememberedLogin();
 
   if (currentRole === "guard") {
-    window.location.href = "guard.htm";
+    window.location.href = "guard.html";
   } else if (currentRole === "secretary") {
-    window.location.href = "secretary.htm";
+    window.location.href = "secretary.html";
   } else {
     const flat = encodeURIComponent(loginInput.value.trim() || "A-302");
     const name = encodeURIComponent(nameInput.value.trim() || "Resident");
-    window.location.href = `resident.htm?flat=${flat}&name=${name}`;
+    window.location.href = `resident.html?flat=${flat}&name=${name}`;
   }
 });
 
