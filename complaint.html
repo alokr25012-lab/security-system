@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raise Complaint</title>
+  <link rel="stylesheet" href="complaint.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">SecureGate</p>
+        <h1>Raise Complaint</h1>
+        <p class="subtext">Submit a complaint for your society from this separate page.</p>
+      </div>
+      <a class="back-link" id="backToResident" href="resident.htm">Back to Resident</a>
+    </header>
+
+    <section class="card">
+      <p class="eyebrow">Complaint Form</p>
+      <h2 id="complaintResidentHeading">Resident Complaint</h2>
+      <label>
+        Problem
+        <input id="complaintInput" type="text" value="Water leakage near parking area">
+      </label>
+      <button class="primary-button" id="complaintSubmitButton" type="button">Submit Complaint</button>
+      <p class="status-text" id="complaintStatus">Complaint not submitted yet.</p>
+    </section>
+
+    <section class="card">
+      <p class="eyebrow">Recent Complaints</p>
+      <div class="list-box" id="complaintHistory">
+        <div class="list-item">Loading complaints...</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="shared-store.js"></script>
+  <script src="complaint.js"></script>
+</body>
+</html>
